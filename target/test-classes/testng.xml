@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+  <test thread-count="5" name="LoginTest">
+  <parameter name="browser" value="chrome" />
+  <parameter name="url" value="https://www.amazon.in" />
+  <parameter name="reportname" value="AmazonLogin" />
+  <parameter name="testname" value="Login" />
+  <parameter name="key" value="false" />
+    <classes>
+      <class name="testcases.LoginTest"/>
+      <class name="testcases.ProductSearchTest" />
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="forget">
+  <parameter name="browser" value="chrome" />
+  <parameter name="url" value="https://www.amazon.in" />
+  <parameter name="reportname" value="Forget" />
+  <parameter name="testname" value="Forget" />
+  <parameter name="key" value="true" />
+  <classes>
+  <class name="testcases.ForgetTest" />
+  </classes>
+  </test>
+  
+</suite> <!-- Suite -->
